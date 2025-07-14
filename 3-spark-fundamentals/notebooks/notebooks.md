@@ -1,1 +1,0 @@
-The following notebooks are copied over from [data-engineer-handbook](https://github.com/DataExpert-io/data-engineer-handbook/blob/main/bootcamp/materials/3-spark-fundamentals/) with my own edits and notes added in.
