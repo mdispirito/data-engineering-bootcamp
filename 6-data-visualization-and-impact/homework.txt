@@ -1,0 +1,19 @@
+Executive Dashboard:
+https://public.tableau.com/app/profile/marco.di.spirito/viz/de_bootcamp_analytics_homework/ExecutiveDashboard
+
+Dashboard includes the following metrics over time:
+- total matches played
+- number of unique players
+- match completion rate
+- proportion of team games
+
+Exploratory Dashboard:
+https://public.tableau.com/app/profile/marco.di.spirito/viz/de_bootcamp_analytics_homework_2/ExploratoryDashboard
+
+Dashboard is interactive and includes the following charts
+- Kill metrics (total kills, and kill/death ratio)
+- Most Wins
+- Most Deaths
+
+It also includes interactive filters on Map Name.
+Since there are lots of maps, I recategorized everything outside of the top 7 most popular into "Other".
