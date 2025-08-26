@@ -62,3 +62,53 @@ Multiple sources of truth
 	- understand from stakeholders why they needed something different
 	- build a spec that outlines a new path forward that can be agreed upon
 
+Understand from stakeholders why they needed something different
+- there's usually a reason there's multiple data sets
+- could be organizational, ownership, technical, skills, etc
+	- maybe one team doesn't/didn't trust another team to deliver
+	- maybe the team that should own it doesn't have the bandwidth
+	- maybe the team that should own it doesn't have the technical skillset
+- work with stakeholders to find an ownership model that works long term
+
+Build a pipeline spec
+- capture all the needs from stakeholders
+- get all the multiple sources of truth owners to sign off (which helps with migrations later)
+
+Models for getting ahead of tech debt
+- fix "as you go"
+	- when you're shipping new features, fix the tech debt as you go
+	- pro: not much incremental burden
+	- con: the tech debt rarely actually gets fixed because it's not a priority
+- allocate a portion of time each quarter (often called "tech excellence" week)
+	- pro: fix things in big bursts, you actually fix a lot of problems
+	- con: you tie up the team for a week, and tech debt build up quite a lot in the mean time (like brushing your teeth for 90 minutes once a quarter, lol)
+- have the on-call person focus on tech debt during their shift
+	- pro: they are aware of the most urgent things, and they fix bugs as they arise
+	- con: on-call person does nothing else that week, and some on-call people just won't actually do it
+
+Data Migration Models
+- the extremely cautious approach
+	- be careful not to break anything, parallel pipelines for months
+	- this is the more expensive approach
+- the bull in the china shop approach
+	- efficiency wins, minimize risk by migrating high-impact pipelines first
+	- kill the legacy pipeline as soon as you can
+
+Proper On-Call Responsibilities
+- set proper expectations with your stakeholders
+- document every failure and bug
+	- big pain short term, but relief long term
+- on-call handoff
+	- should be a 20 - 30 minute sync to pass context from one person to the next
+
+Runbooks
+- you don't need runbooks for everything, just...
+- complex pipelines need runbooks (which should be linked in the spec)
+- most important components
+	- primary and secondary owners
+	- upstream owners (teams, not individuals)
+		- this is important when upstream data quality checks fail
+	- common issues (if any)
+	- critical downstream owners (teams, not individuals)
+		- only document the ones that really matter
+	- SLAs and agreements
